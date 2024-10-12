@@ -1,5 +1,3 @@
-FROM oven/bun:alpine AS base
-
 # Stage 1: Install dependencies
 FROM base AS deps
 WORKDIR /app
