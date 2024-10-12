@@ -4,6 +4,8 @@ FROM alpine:3.19 as base
 FROM base AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+RUN nvm install 20
 RUN npm install
 
 # Stage 2: Build the application
