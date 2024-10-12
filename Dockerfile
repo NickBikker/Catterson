@@ -1,11 +1,10 @@
-FROM alpine:3.19 as base
-
+FROM oven/bun:alpine AS base
 
 # Stage 1: Install dependencies
 FROM base AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm install
+COPY package.json bun.lockb ./
+RUN bun install --frozen-lockfile
 
 # Stage 2: Build the application
 FROM base AS builder
@@ -23,4 +22,4 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3000
-CMD ["npm", "run", "server.js"]
+CMD ["bun", "run", "server.js"]
