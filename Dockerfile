@@ -1,3 +1,5 @@
+FROM alpine:3.19 as base
+
 # Stage 1: Install dependencies
 FROM base AS deps
 WORKDIR /app
