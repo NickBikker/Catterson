@@ -3,7 +3,10 @@ FROM alpine:3.19 as base
 # Stage 1: Install dependencies
 FROM base AS deps
 WORKDIR /app
-COPY package.json ./
+COPY package.json package-lock.json ./
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y nodejs \
+    npm
 RUN npm install
 
 # Stage 2: Build the application
