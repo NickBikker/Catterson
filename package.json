@@ -1,0 +1,52 @@
+{
+  "name": "welcome-screen",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky",
+    "format": "next lint --fix && prettier '**/*.{json,yaml,(j|t)s?(x)}' --write --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.6",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "5.4.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^18.4.3",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-semistandard": "^17.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-prettier": "^9.0.0",
+    "@dword-design/eslint-plugin-import-alias": "^5.1.1",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
